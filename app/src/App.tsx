@@ -1,7 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { ObjectVisualizer } from 'object-visualizer/lib/object-visualizer';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { ObjectVisualizer } from "object-visualizer/lib/object-visualizer";
 
 const test = {
   appHasAddons: false,
@@ -277,11 +277,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a"
-        }
+          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a",
+        },
       ],
       billingCycle: 1,
       maximumPurchaseQuantity: 300,
@@ -530,7 +530,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -546,7 +546,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K5KP",
@@ -813,11 +813,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "e3254b63-3660-4ed4-9bb8-5d8cbd3aaae0"
-        }
+          value: "e3254b63-3660-4ed4-9bb8-5d8cbd3aaae0",
+        },
       ],
       billingCycle: 1,
       maximumPurchaseQuantity: 300,
@@ -1066,7 +1066,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -1082,7 +1082,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K59C",
@@ -1349,11 +1349,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a"
-        }
+          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a",
+        },
       ],
       billingCycle: 2,
       maximumPurchaseQuantity: 300,
@@ -1602,7 +1602,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -1618,7 +1618,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K5B4",
@@ -1885,11 +1885,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "467eab54-127b-42d3-b046-3844b860bebf"
-        }
+          value: "467eab54-127b-42d3-b046-3844b860bebf",
+        },
       ],
       billingCycle: 0,
       maximumPurchaseQuantity: 300,
@@ -2138,7 +2138,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -2154,7 +2154,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K6H9",
@@ -2423,7 +2423,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -2439,13 +2439,15 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
-    }
+      cstmViralSkuDetails: null,
+    },
   ],
   hardwareProperties: null,
   iconImage: {
-    uri: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
-    location: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
+    uri:
+      "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
+    location:
+      "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
     imagePurpose: "logo",
     height: "1555",
     width: "1555",
@@ -2453,12 +2455,14 @@ const test = {
     foregroundColor: null,
     backgroundColor: "#FFFFFF",
     fileSize: 0,
-    positionInfo: null
+    positionInfo: null,
   },
   images: [
     {
-      uri: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?ver=34f7",
-      location: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?ver=34f7",
+      uri:
+        "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?ver=34f7",
+      location:
+        "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?ver=34f7",
       imagePurpose: "logo",
       height: "1555",
       width: "1555",
@@ -2466,7 +2470,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#FFFFFF",
       fileSize: 0,
-      positionInfo: null
+      positionInfo: null,
     },
     {
       uri:
@@ -2480,7 +2484,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/1"
+      positionInfo: "Desktop/1",
     },
     {
       uri:
@@ -2494,7 +2498,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/2"
+      positionInfo: "Desktop/2",
     },
     {
       uri:
@@ -2508,7 +2512,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/3"
+      positionInfo: "Desktop/3",
     },
     {
       uri:
@@ -2522,7 +2526,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/4"
+      positionInfo: "Desktop/4",
     },
     {
       uri:
@@ -2536,7 +2540,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/5"
+      positionInfo: "Desktop/5",
     },
     {
       uri:
@@ -2550,7 +2554,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/6"
+      positionInfo: "Desktop/6",
     },
     {
       uri:
@@ -2564,7 +2568,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/7"
+      positionInfo: "Desktop/7",
     },
     {
       uri:
@@ -2578,7 +2582,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/8"
+      positionInfo: "Desktop/8",
     },
     {
       uri:
@@ -2592,7 +2596,7 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/9"
+      positionInfo: "Desktop/9",
     },
     {
       uri:
@@ -2606,11 +2610,13 @@ const test = {
       foregroundColor: null,
       backgroundColor: "#DC3C00",
       fileSize: 0,
-      positionInfo: "Desktop/10"
+      positionInfo: "Desktop/10",
     },
     {
-      uri: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vv0c?ver=3e63",
-      location: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vv0c?ver=3e63",
+      uri:
+        "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vv0c?ver=3e63",
+      location:
+        "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE2vv0c?ver=3e63",
       imagePurpose: "hero",
       height: "1200",
       width: "2400",
@@ -2618,8 +2624,8 @@ const test = {
       foregroundColor: "",
       backgroundColor: "",
       fileSize: 1095041,
-      positionInfo: ""
-    }
+      positionInfo: "",
+    },
   ],
   productId: "CFQ7TTC0K5J7",
   id: "CFQ7TTC0K5J7",
@@ -2889,11 +2895,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a"
-        }
+          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a",
+        },
       ],
       billingCycle: 1,
       maximumPurchaseQuantity: 300,
@@ -3142,7 +3148,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -3158,7 +3164,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K5KP",
@@ -3425,11 +3431,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "e3254b63-3660-4ed4-9bb8-5d8cbd3aaae0"
-        }
+          value: "e3254b63-3660-4ed4-9bb8-5d8cbd3aaae0",
+        },
       ],
       billingCycle: 1,
       maximumPurchaseQuantity: 300,
@@ -3678,7 +3684,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -3694,7 +3700,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K59C",
@@ -3961,11 +3967,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a"
-        }
+          value: "b8223c6c-5717-4564-8ed1-a46bf9b0e30a",
+        },
       ],
       billingCycle: 2,
       maximumPurchaseQuantity: 300,
@@ -4214,7 +4220,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -4230,7 +4236,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K5B4",
@@ -4497,11 +4503,11 @@ const test = {
             "YT",
             "ZA",
             "ZM",
-            "ZW"
+            "ZW",
           ],
           idType: "OmsOfferId",
-          value: "467eab54-127b-42d3-b046-3844b860bebf"
-        }
+          value: "467eab54-127b-42d3-b046-3844b860bebf",
+        },
       ],
       billingCycle: 0,
       maximumPurchaseQuantity: 300,
@@ -4750,7 +4756,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -4766,7 +4772,7 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
+      cstmViralSkuDetails: null,
     },
     {
       availabilityId: "CFQ7TTC0K6H9",
@@ -5035,7 +5041,7 @@ const test = {
         "YT",
         "ZA",
         "ZM",
-        "ZW"
+        "ZW",
       ],
       iconImage: null,
       backgroundImage: null,
@@ -5051,8 +5057,8 @@ const test = {
       termUnits: null,
       requirePaymentInstrument: false,
       cstmRequirePaymentInstrument: false,
-      cstmViralSkuDetails: null
-    }
+      cstmViralSkuDetails: null,
+    },
   ],
   supportUri: "https://support.office.com/",
   features: [],
@@ -5237,7 +5243,7 @@ const test = {
     "Chinese (Traditional, Hong Kong S.A.R.)",
     "Chinese (Traditional, Macao S.A.R.)",
     "Chinese (Simplified, Singapore)",
-    "Chinese (Traditional, Taiwan)"
+    "Chinese (Traditional, Taiwan)",
   ],
   supportedProcessors: [],
   supportedDevices: [0, 1, 9],
@@ -5484,39 +5490,42 @@ const test = {
     "YT",
     "ZA",
     "ZM",
-    "ZW"
+    "ZW",
   ],
   title: "Microsoft 365 Business Standard",
   subTitle: null,
-  productImageUri: "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
+  productImageUri:
+    "//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4sQFM?w=180&h=180&q=60",
   formattedMsrps: {
     cfq7ttc0k5jc: "USD12.5",
     cfq7ttc0k5kp: "USD15",
     cfq7ttc0k59c: "USD150",
-    cfq7ttc0k5b4: "USD0"
+    cfq7ttc0k5b4: "USD0",
   },
   formattedPrices: {
     cfq7ttc0k5jc: "USD12.5",
     cfq7ttc0k5kp: "USD15",
     cfq7ttc0k59c: "USD150",
-    cfq7ttc0k5b4: "USD0"
+    cfq7ttc0k5b4: "USD0",
   },
   productCategory: 0,
   publisher: "Microsoft Corporation",
   productDetailsResponse: {
     commercialSubscriptionProductCategory: 0,
-    supportedMarkets: ["NEUTRAL"]
+    supportedMarkets: ["NEUTRAL"],
   },
   isInvitationOnly: false,
-  origin: null
-}
+  origin: null,
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ObjectVisualizer data={test} expand={true} ></ObjectVisualizer>
+        <div style={{ maxWidth: 500 }}>
+          <ObjectVisualizer data={test} expand={true}></ObjectVisualizer>
+        </div>
       </header>
     </div>
   );
