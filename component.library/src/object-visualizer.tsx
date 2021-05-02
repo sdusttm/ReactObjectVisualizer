@@ -38,14 +38,14 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
     const isObjet = data !== null && typeof data === "object" && !isArray;
     const isSmallArrayOrObject = (isArray || isObjet) && JSON.stringify(data).length < ObjectSizeLimit;
     const items = data ? Object.entries(data).filter((x) => x[1] !== undefined) : [];
-    const isStringArray = isArray && Object.values(data).every((x) => typeof x === "string");
+    const isSimpleArray = isArray && Object.values(data).every((x) => typeof x === "string" || typeof x === "number");
     const showLink = !!data && !isEmptyArray;
     const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject || isSmallArrayOrObject);
     const excerpt = !expand ? JSON.stringify(data).slice(0, 20) + "..." : undefined;
     return (
         <>
             <div style={expand ? {} : hide}>
-                {isStringArray ? (
+                {isSimpleArray ? (
                     JSON.stringify(Object.values(data))
                 ) : (
                     <table style={table}>
