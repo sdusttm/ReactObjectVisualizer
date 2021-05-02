@@ -5524,7 +5524,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div style={{ maxWidth: 500 }}>
-          <ObjectVisualizer data={test} expand={true}></ObjectVisualizer>
+          <ObjectVisualizer
+            data={test}
+            configs={{
+              defaultExpandLevels: 1,
+              defaultExpandObjectSizeLimit: 200,
+            }}
+          ></ObjectVisualizer>
         </div>
       </header>
     </div>

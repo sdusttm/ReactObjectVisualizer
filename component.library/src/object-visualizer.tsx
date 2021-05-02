@@ -16,20 +16,30 @@ const hide = {
     display: "none"
 } as any;
 
-interface IDataViewerProps {
-    data: any;
-    expand: boolean;
+interface DataViewerConfigs {
+    defaultExpandLevels?: number;
+    defaultExpandObjectSizeLimit?: number;
 }
 
-export const ObjectVisualizer = ({ data, expand: defaultExpand }: IDataViewerProps) => {
-    const [expand, setExpand] = useState(defaultExpand);
+interface DataViewerProps {
+    data: any;
+    configs?: DataViewerConfigs;
+}
+
+export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
+    const { defaultExpandLevels, defaultExpandObjectSizeLimit } = configs || {};
+    const expandLevels = defaultExpandLevels === undefined ? 1 : defaultExpandLevels;
+    const ObjectSizeLimit = defaultExpandObjectSizeLimit || 0;
+
     const isArray = data && Object.keys(data).every((x) => !isNaN(x as any));
     const isObjet = data !== null && typeof data === "object" && !isArray;
+    const isSmallArrayOrObject = (isArray || isObjet) && JSON.stringify(data).length < ObjectSizeLimit;
     const items = data ? Object.entries(data).filter((x) => x[1] !== undefined) : [];
     const isStringArray = isArray && Object.values(data).every((x) => typeof x === "string");
+    const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject || isSmallArrayOrObject);
     return (
         <>
-            <div style={!expand ? hide : {}}>
+            <div style={expand ? {} : hide}>
                 {isStringArray ? (
                     JSON.stringify(Object.values(data))
                 ) : (
@@ -39,7 +49,13 @@ export const ObjectVisualizer = ({ data, expand: defaultExpand }: IDataViewerPro
                                 {!isArray && <td style={cell}>{item[0]}</td>}
                                 <td style={cell}>
                                     {typeof item[1] === "object"
-                                        ? ObjectVisualizer({ data: item[1], expand: false })
+                                        ? ObjectVisualizer({
+                                              data: item[1],
+                                              configs: {
+                                                  ...configs,
+                                                  defaultExpandLevels: isSmallArrayOrObject ? 1000 : expandLevels - 1 // if object is small, we just expand to all layers
+                                              }
+                                          })
                                         : JSON.stringify(item[1])}
                                 </td>
                             </tr>
@@ -47,10 +63,12 @@ export const ObjectVisualizer = ({ data, expand: defaultExpand }: IDataViewerPro
                     </table>
                 )}
             </div>
-            {isObjet && !defaultExpand && (
-                <a style={{ fontSize: 14 }} onClick={() => setExpand(!expand)}>
-                    {expand ? "collapse" : "expand"}
-                </a>
+            {!expand && !!data && (
+                <div style={{ textAlign: "left" }}>
+                    <a style={{ fontSize: 14 }} onClick={() => setExpand(!expand)}>
+                        {expand ? "collapse" : "expand"}
+                    </a>
+                </div>
             )}
         </>
     );
