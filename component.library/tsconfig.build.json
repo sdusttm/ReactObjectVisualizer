@@ -1,0 +1,32 @@
+{
+    "extends": "./tsconfig.json",
+    "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"],
+    "compilerOptions": {
+      "emitDeclarationOnly": true,
+      "sourceMap": true,
+      "incremental": true,
+      "allowJs": true,
+      "declaration": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": false,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "module": "esnext",
+      "moduleResolution": "node",
+      "noEmit": false,
+      "noImplicitAny": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": false,
+      "preserveConstEnums": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "strictNullChecks": false,
+      "target": "es5",
+      "outDir": "dist/lib"
+    }
+  }
+  

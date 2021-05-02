@@ -1,0 +1,18 @@
+{
+    "printWidth": 120,
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "endOfLine": "crlf",
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "options": {
+          "parser": "babel-ts"
+        }
+      }
+    ]
+  }
+  
