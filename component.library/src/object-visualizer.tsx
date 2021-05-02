@@ -19,6 +19,7 @@ const hide = {
 interface DataViewerConfigs {
     defaultExpandLevels?: number;
     defaultExpandObjectSizeLimit?: number;
+    showExerptForBigContent?: boolean;
 }
 
 interface DataViewerProps {
@@ -27,9 +28,10 @@ interface DataViewerProps {
 }
 
 export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
-    const { defaultExpandLevels, defaultExpandObjectSizeLimit } = configs || {};
+    const { defaultExpandLevels, defaultExpandObjectSizeLimit, showExerptForBigContent } = configs || {};
     const expandLevels = defaultExpandLevels === undefined ? 1 : defaultExpandLevels;
     const ObjectSizeLimit = defaultExpandObjectSizeLimit || 0;
+    const showExerpt = showExerptForBigContent;
 
     const isArray = data && Object.keys(data).every((x) => !isNaN(x as any));
     const isEmptyArray = isArray && Object.entries(data).length === 0;
@@ -39,6 +41,7 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
     const isStringArray = isArray && Object.values(data).every((x) => typeof x === "string");
     const showLink = !!data && !isEmptyArray;
     const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject || isSmallArrayOrObject);
+    const excerpt = !expand ? JSON.stringify(data).slice(0, 20) + "..." : undefined;
     return (
         <>
             <div style={expand ? {} : hide}>
@@ -66,11 +69,14 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
                 )}
             </div>
             {showLink && (
-                <div style={{ textAlign: "left" }}>
-                    <a style={{ fontSize: 14 }} onClick={() => setExpand(!expand)}>
-                        {expand ? "collapse" : "expand"}
-                    </a>
-                </div>
+                <>
+                    <div style={expand ? hide : {}}>{showExerpt && excerpt}</div>
+                    <div style={{ textAlign: "left" }}>
+                        <a style={{ fontSize: 14 }} onClick={() => setExpand(!expand)}>
+                            {expand ? "collapse" : "expand"}
+                        </a>
+                    </div>
+                </>
             )}
         </>
     );
