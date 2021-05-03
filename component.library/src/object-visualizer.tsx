@@ -35,12 +35,12 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
 
     const isArray = data && Object.keys(data).every((x) => !isNaN(x as any));
     const isEmptyArray = isArray && Object.entries(data).length === 0;
+    const isSimpleArray = isArray && Object.values(data).every((x) => typeof x === "string" || typeof x === "number");
     const isObjet = data !== null && typeof data === "object" && !isArray;
     const isSmallArrayOrObject = (isArray || isObjet) && JSON.stringify(data).length < ObjectSizeLimit;
     const items = data ? Object.entries(data).filter((x) => x[1] !== undefined) : [];
-    const isSimpleArray = isArray && Object.values(data).every((x) => typeof x === "string" || typeof x === "number");
     const showLink = !!data && !isEmptyArray;
-    const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject || isSmallArrayOrObject);
+    const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject);
     const excerpt = !expand ? JSON.stringify(data).slice(0, 20) + "..." : undefined;
     return (
         <>
