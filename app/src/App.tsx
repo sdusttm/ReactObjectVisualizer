@@ -5528,7 +5528,7 @@ function App() {
             data={test}
             configs={{
               defaultExpandLevels: 1,
-              defaultExpandObjectSizeLimit: 200,
+              defaultExpandObjectSizeLimit: 100,
             }}
           ></ObjectVisualizer>
         </div>
