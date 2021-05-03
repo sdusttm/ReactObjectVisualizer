@@ -1,6 +1,6 @@
 {
     "name": "react-object-visualizer",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "An extremely light weight react component library to visualize data object in a table format",
     "main": "dist/lib/object-visualizer.js",
     "types": "dist/lib/object-visualizer.d.ts",
