@@ -1,7 +1,7 @@
 {
     "name": "react-object-visualizer",
-    "version": "1.0.1",
-    "description": "A react component library to visualize data object in a table format",
+    "version": "1.0.4",
+    "description": "An extremely light weight react component library to visualize data object in a table format",
     "main": "object-visualizer.js",
     "scripts": {
         "watch": "node ./scripts/watch.js",
