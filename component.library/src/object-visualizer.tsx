@@ -34,18 +34,19 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
     const isArray = data && Object.keys(data).every((x) => !isNaN(x as any));
     const isEmptyArray = isArray && Object.entries(data).length === 0;
     const isStringArray = isArray && Object.values(data).every((x) => typeof x === "string");
-    const isNumberArray = isArray && Object.values(data).every((x) => typeof x === "string");
+    const isNumberArray = isArray && Object.values(data).every((x) => typeof x === "number");
     const isObjet = data !== null && typeof data === "object" && !isArray;
     const isSmallArrayOrObject = (isArray || isObjet) && JSON.stringify(data).length < ObjectSizeLimit;
     const items = data ? Object.entries(data).filter((x) => x[1] !== undefined) : [];
     const showLink = !!data && !isEmptyArray;
     const [expand, setExpand] = useState(expandLevels > 0 || isSmallArrayOrObject);
+
     let collapsedContentType = "";
     if (isObjet) {
-        collapsedContentType = "(Object)";
+        collapsedContentType = "object";
     } else if (isArray) {
         const length = Object.values(data).length;
-        collapsedContentType = `${isStringArray ? "(String" : isNumberArray ? "(Number" : "(Object"}[${length}])`;
+        collapsedContentType = `${isStringArray ? "string" : isNumberArray ? "number" : "object"}[${length}]`;
     }
 
     return (
@@ -61,7 +62,9 @@ export const ObjectVisualizer = ({ data, configs }: DataViewerProps) => {
                                           data: item[1],
                                           configs: {
                                               ...configs,
-                                              defaultExpandLevels: isSmallArrayOrObject ? 1000 : expandLevels - 1 // if object is small, we just expand to all layers
+                                              defaultExpandLevels: isSmallArrayOrObject ? 1000 : expandLevels - 1, // if object is small, we just expand to all layers
+                                              defaultExpandObjectSizeLimit:
+                                                  defaultExpandLevels > 0 ? defaultExpandObjectSizeLimit : 0 // we only want to apply defaultExpandObjectSizeLimit on top level
                                           }
                                       })
                                     : JSON.stringify(item[1])}
