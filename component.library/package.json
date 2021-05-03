@@ -1,8 +1,18 @@
 {
     "name": "react-object-visualizer",
-    "version": "1.0.5",
+    "version": "1.0.10",
     "description": "An extremely light weight react component library to visualize data object in a table format",
-    "main": "object-visualizer.js",
+    "main": "dist/lib/object-visualizer.js",
+    "types": "dist/lib/object-visualizer.d.ts",
+    "files": [
+        "dist/lib/*.js",
+        "dist/lib/*.d.ts",
+        "dist/lib/*.js.map"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sdusttm/ReactObjectVisualizer.git"
+    },
     "scripts": {
         "watch": "node ./scripts/watch.js",
         "tsc": "npx tsc --project ./tsconfig.build.json",
