@@ -16,6 +16,11 @@ const hide = {
     display: "none"
 } as any;
 
+const link = {
+    color: "rgb(0, 120, 212)",
+    fontSize: 14
+};
+
 interface ObjectVisualizerConfigs {
     defaultExpandLevels?: number;
     defaultExpandObjectSizeLimit?: number;
@@ -26,7 +31,11 @@ interface ObjectVisualizerProps {
     configs?: ObjectVisualizerConfigs;
 }
 
-export const ObjectVisualizer = ({ object, configs }: ObjectVisualizerProps) => {
+export const ObjectVisualizer = (props: ObjectVisualizerProps) => {
+    return <ObjectVisualizerInternal {...props} isTop={true}></ObjectVisualizerInternal>;
+};
+
+export const ObjectVisualizerInternal = ({ object, configs, isTop }: ObjectVisualizerProps & { isTop: boolean }) => {
     const { defaultExpandLevels, defaultExpandObjectSizeLimit } = configs || {};
     const expandLevels = defaultExpandLevels === undefined ? 1 : defaultExpandLevels;
     const ObjectSizeLimit = defaultExpandObjectSizeLimit || 0;
@@ -58,7 +67,7 @@ export const ObjectVisualizer = ({ object, configs }: ObjectVisualizerProps) => 
                             {!isArray && <td style={cell}>{item[0]}</td>}
                             <td style={cell}>
                                 {typeof item[1] === "object"
-                                    ? ObjectVisualizer({
+                                    ? ObjectVisualizerInternal({
                                           object: item[1],
                                           configs: {
                                               ...configs,
@@ -67,7 +76,8 @@ export const ObjectVisualizer = ({ object, configs }: ObjectVisualizerProps) => 
                                                   : expandLevels - 1, // if object is small, we just keep expanding
                                               defaultExpandObjectSizeLimit:
                                                   defaultExpandLevels > 0 ? defaultExpandObjectSizeLimit : 0 // we only want to apply defaultExpandObjectSizeLimit on top levels
-                                          }
+                                          },
+                                          isTop: false
                                       })
                                     : JSON.stringify(item[1])}
                             </td>
@@ -75,10 +85,10 @@ export const ObjectVisualizer = ({ object, configs }: ObjectVisualizerProps) => 
                     ))}
                 </table>
             </div>
-            {showLink && (
+            {showLink && !isTop && (
                 <>
                     <div style={{ textAlign: "left" }}>
-                        <a style={{ fontSize: 14 }} onClick={() => setExpand(!expand)}>
+                        <a style={link} onClick={() => setExpand(!expand)}>
                             {expand ? "collapse" : "expand " + collapsedContentType}
                         </a>
                     </div>

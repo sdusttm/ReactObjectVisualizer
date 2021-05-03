@@ -25,7 +25,7 @@ import { ObjectVisualizer } from "react-object-visualizer";
 ```js
 // data is the object to be visualize, configs are optional config parameters
 <ObjectVisualizer
-    data={data}
+    object={data}
     configs={{
         defaultExpandLevels: 1,
         defaultExpandObjectSizeLimit: 500
