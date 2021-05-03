@@ -1,6 +1,10 @@
 # Object Visualizer
 
-An extremely light weight react component to visualize the JSON object in a table format.
+A light weight react component to visualize the JSON object in a table format.
+
+## Example
+
+![alt text](https://github.com/sdusttm/ReactObjectVisualizer/blob/main/app/screen-shots/Example.PNG?raw=true)
 
 ## Features
 
